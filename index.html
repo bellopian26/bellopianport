@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Belay Assefa Bekele — IT Officer & Computer Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --c1:#6EE7F7; --c2:#A78BFA; --c3:#F472B6;
+  --gold:#FCD34D; --green:#34D399;
+  --text:#F1F5F9; --soft:#94A3B8; --muted:#475569;
+  --bg:#020817; --bg2:#0A0F1E; --panel:rgba(10,15,30,0.85);
+  --border:rgba(255,255,255,0.08);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--c1),var(--c2));border-radius:3px;}
+
+/* ── NAV ───────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:68px;padding:0 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(2,8,23,0.75);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:1.15rem;color:#fff;letter-spacing:-0.03em;}
+.nav-logo em{font-style:normal;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nav-links{display:flex;gap:2.2rem;list-style:none;}
+.nav-links a{color:var(--muted);font-size:0.8rem;text-decoration:none;letter-spacing:0.07em;text-transform:uppercase;font-weight:600;transition:color 0.2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--c1);transform:scaleX(0);transition:transform 0.2s;}
+.nav-links a:hover{color:var(--c1);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.hire-btn{padding:0.5rem 1.4rem;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#020817;font-weight:700;font-size:0.82rem;text-decoration:none;letter-spacing:0.04em;box-shadow:0 0 20px rgba(110,231,247,0.25);transition:opacity 0.2s,transform 0.2s;}
+.hire-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+/* ── HERO ──────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:90px 3rem 3rem;
+}
+/* BACKGROUND PHOTO — circuit board / tech */
+.hero-bg-img{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC41Ij4KPHBhdGggZD0iTTIwIDIwIEgxMDAgVjcwIEgxODAgVjIwIi8+CjxwYXRoIGQ9Ik0yMCAyMCBWMTAwIEg2MCIvPgo8cGF0aCBkPSJNMTgwIDEwMCBWMTgwIEgyMjAiLz4KPHBhdGggZD0iTTIwIDE0MCBIODAgVjIyMCIvPgo8cGF0aCBkPSJNMTAwIDE0MCBWMjAwIEgxODAgVjE0MCIvPgo8cGF0aCBkPSJNMTQwIDcwIFYxMDAiLz4KPHBhdGggZD0iTTYwIDEwMCBWMTQwIi8+CjxwYXRoIGQ9Ik0xODAgMjAgVjYwIi8+CjwvZz4KPGcgZmlsbD0iIzZFRTdGNyIgb3BhY2l0eT0iMC43Ij4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI4MCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNDAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjE4MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMjAiIGN5PSIxODAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTgwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjgwIiBjeT0iMjIwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjIwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDAiIHI9IjMiLz4KPC9nPgo8L3N2Zz4K");
+  background-size:240px 240px;background-repeat:repeat;background-position:center;
+  opacity:0.9;
+  z-index:0;
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(to right, rgba(2,8,23,0.92) 40%, rgba(2,8,23,0.4) 100%),
+    radial-gradient(ellipse 60% 70% at 80% 50%, rgba(110,231,247,0.08), transparent 70%),
+    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(167,139,250,0.08), transparent 60%);
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;max-width:1200px;width:100%;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.9rem;border-radius:999px;border:1px solid rgba(110,231,247,0.25);background:rgba(110,231,247,0.07);font-size:0.74rem;font-weight:600;color:var(--c1);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.4rem;}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,0.5);}50%{box-shadow:0 0 0 7px rgba(52,211,153,0);}}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,5.5vw,4.8rem);font-weight:800;line-height:1.0;letter-spacing:-0.04em;color:#fff;margin-bottom:0.4rem;}
+.gt{background:linear-gradient(135deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gs 4s ease infinite;}
+@keyframes gs{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.hero-role{font-family:'JetBrains Mono',monospace;font-size:0.95rem;color:var(--c1);opacity:0.9;margin-bottom:1.4rem;display:flex;align-items:center;gap:0.5rem;}
+.hero-role::before{content:'>';color:var(--c2);}
+.hero-desc{color:var(--soft);font-size:0.97rem;max-width:520px;line-height:1.85;margin-bottom:2.5rem;}
+.hero-desc strong{color:var(--text);}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-grad{padding:0.8rem 2rem;border-radius:10px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#020817;font-weight:700;font-size:0.9rem;text-decoration:none;box-shadow:0 8px 30px rgba(110,231,247,0.25);transition:transform 0.2s,box-shadow 0.2s;}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(110,231,247,0.38);}
+.btn-out{padding:0.8rem 2rem;border-radius:10px;border:1px solid rgba(255,255,255,0.12);color:var(--soft);font-size:0.9rem;text-decoration:none;font-weight:500;transition:all 0.2s;}
+.btn-out:hover{border-color:var(--c1);color:var(--c1);background:rgba(110,231,247,0.05);}
+.hero-cards{display:flex;flex-direction:column;gap:1rem;}
+.hc{background:rgba(10,15,30,0.8);backdrop-filter:blur(16px);border:1px solid rgba(110,231,247,0.12);border-radius:var(--r);padding:1.3rem 1.8rem;min-width:175px;text-align:center;position:relative;overflow:hidden;transition:transform 0.25s,border-color 0.25s;}
+.hc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.hc:nth-child(1)::before{background:linear-gradient(90deg,var(--c1),var(--c2));}
+.hc:nth-child(2)::before{background:linear-gradient(90deg,var(--c2),var(--c3));}
+.hc:nth-child(3)::before{background:linear-gradient(90deg,var(--c3),var(--gold));}
+.hc:hover{transform:translateX(-5px);border-color:rgba(110,231,247,0.3);}
+.hc-n{font-family:'Space Grotesk',sans-serif;font-size:2.3rem;font-weight:800;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hc-l{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.2rem;}
+
+/* ── SECTION BASE ──────────────────────────────── */
+section{padding:6rem 3rem;position:relative;}
+.con{max-width:1100px;margin:0 auto;}
+.sl{display:inline-flex;align-items:center;gap:0.75rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--c1);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;}
+.sl::before{content:'';width:20px;height:1px;background:linear-gradient(90deg,var(--c1),transparent);}
+h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3vw,2.7rem);font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem;}
+.ss{color:var(--muted);font-size:0.92rem;margin-bottom:3.5rem;}
+
+/* ── ABOUT — with tech bg ──────────────────────── */
+#about{
+  background-color:var(--bg2);
+  position:relative;overflow:hidden;
+}
+.about-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIj4KPGcgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4xOCI+CjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjE2MCIgeTI9IjAiLz4KPGxpbmUgeDE9IjAiIHkxPSI0MCIgeDI9IjE2MCIgeTI9IjQwIi8+CjxsaW5lIHgxPSIwIiB5MT0iODAiIHgyPSIxNjAiIHkyPSI4MCIvPgo8bGluZSB4MT0iMCIgeTE9IjEyMCIgeDI9IjE2MCIgeTI9IjEyMCIvPgo8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTYwIi8+CjxsaW5lIHgxPSI0MCIgeTE9IjAiIHgyPSI0MCIgeTI9IjE2MCIvPgo8bGluZSB4MT0iODAiIHkxPSIwIiB4Mj0iODAiIHkyPSIxNjAiLz4KPGxpbmUgeDE9IjEyMCIgeTE9IjAiIHgyPSIxMjAiIHkyPSIxNjAiLz4KPC9nPgo8ZyBzdHJva2U9IiNBNzhCRkEiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTUgNSBIMTUgTTUgNSBWMTUiLz4KPHBhdGggZD0iTTE1NSA1IEgxNDUgTTE1NSA1IFYxNSIvPgo8cGF0aCBkPSJNNSAxNTUgSDE1IE01IDE1NSBWMTQ1Ii8+CjxwYXRoIGQ9Ik0xNTUgMTU1IEgxNDUgTTE1NSAxNTUgVjE0NSIvPgo8L2c+Cjwvc3ZnPgo=");
+  background-size:160px 160px;background-repeat:repeat;
+  opacity:0.5;
+}
+.about-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start;position:relative;z-index:1;}
+.about-text p{color:var(--soft);line-height:1.95;margin-bottom:1.1rem;}
+.about-text strong{color:var(--text);}
+.info-grid{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.ir{display:grid;grid-template-columns:110px 1fr;padding:0.7rem 1.2rem;border-bottom:1px solid var(--border);font-size:0.85rem;transition:background 0.2s;}
+.ir:last-child{border-bottom:none;}
+.ir:hover{background:rgba(110,231,247,0.03);}
+.ik{color:var(--muted);font-weight:600;font-size:0.77rem;text-transform:uppercase;letter-spacing:0.05em;}
+.iv{color:var(--text);}
+.iv a{color:var(--c1);text-decoration:none;}
+
+/* ── EXPERIENCE — dark with subtle overlay ─────── */
+#experience{background:var(--bg);position:relative;overflow:hidden;}
+.exp-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC41Ij4KPHBhdGggZD0iTTIwIDIwIEgxMDAgVjcwIEgxODAgVjIwIi8+CjxwYXRoIGQ9Ik0yMCAyMCBWMTAwIEg2MCIvPgo8cGF0aCBkPSJNMTgwIDEwMCBWMTgwIEgyMjAiLz4KPHBhdGggZD0iTTIwIDE0MCBIODAgVjIyMCIvPgo8cGF0aCBkPSJNMTAwIDE0MCBWMjAwIEgxODAgVjE0MCIvPgo8cGF0aCBkPSJNMTQwIDcwIFYxMDAiLz4KPHBhdGggZD0iTTYwIDEwMCBWMTQwIi8+CjxwYXRoIGQ9Ik0xODAgMjAgVjYwIi8+CjwvZz4KPGcgZmlsbD0iIzZFRTdGNyIgb3BhY2l0eT0iMC43Ij4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI4MCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNDAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjE4MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMjAiIGN5PSIxODAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTgwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjgwIiBjeT0iMjIwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjIwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDAiIHI9IjMiLz4KPC9nPgo8L3N2Zz4K");
+  background-size:240px 240px;background-repeat:repeat;
+  opacity:0.18;
+}
+.timeline{position:relative;padding-left:1.5rem;z-index:1;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--c1),var(--c2),var(--c3),transparent);}
+.tl-item{position:relative;padding-left:2rem;margin-bottom:2.5rem;}
+.tl-dot{position:absolute;left:-1.9rem;top:0.35rem;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 0 0 3px var(--bg),0 0 14px rgba(110,231,247,0.5);}
+.tl-card{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:var(--r);padding:1.6rem 1.8rem;transition:border-color 0.25s,transform 0.25s,background 0.25s;}
+.tl-card:hover{border-color:rgba(110,231,247,0.22);background:rgba(110,231,247,0.03);transform:translateX(5px);}
+.tl-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.9rem;}
+.tl-role{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;}
+.tl-co{font-size:0.82rem;font-weight:600;margin-top:0.15rem;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.tl-badge{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.25rem 0.7rem;border-radius:5px;white-space:nowrap;}
+.tl-list{list-style:none;}
+.tl-list li{color:var(--soft);font-size:0.87rem;padding:0.22rem 0 0.22rem 1.1rem;position:relative;}
+.tl-list li::before{content:'▸';position:absolute;left:0;color:var(--c2);font-size:0.75rem;}
+
+/* ── SKILLS — with AI/tech bg ──────────────────── */
+#skills{position:relative;overflow:hidden;}
+.skills-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIj4KPGcgc3Ryb2tlPSIjQTc4QkZBIiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSI+CjxsaW5lIHgxPSIzMCIgeTE9IjQwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMTIwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iNDAiIHgyPSIxMTAiIHkyPSIxODAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iMTgwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjUwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjE0MCIvPgo8bGluZSB4MT0iMTEwIiB5MT0iMTgwIiB4Mj0iMjEwIiB5Mj0iMTQwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSIxODAiIHgyPSIyMTAiIHkyPSIyMzAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjUwIiB4Mj0iMzAwIiB5Mj0iMTAwIi8+CjxsaW5lIHgxPSIyMTAiIHkxPSIxNDAiIHgyPSIzMDAiIHkyPSIxMDAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjIwMCIvPgo8bGluZSB4MT0iMjEwIiB5MT0iMjMwIiB4Mj0iMzAwIiB5Mj0iMjAwIi8+CjwvZz4KPGcgZmlsbD0iI0E3OEJGQSIgb3BhY2l0eT0iMC42NSI+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNDAiIHI9IjMuMiIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjEyMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iMjAwIiByPSIzLjIiLz4KPGNpcmNsZSBjeD0iMTEwIiBjeT0iOTAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIxMTAiIGN5PSIxODAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIyMTAiIGN5PSI1MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjE0MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjIzMCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjEwMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjIwMCIgcj0iMy4yIi8+CjwvZz4KPC9zdmc+Cg==");
+  background-size:320px 320px;background-repeat:repeat;
+  opacity:0.55;
+}
+#skills::before{content:'';position:absolute;inset:0;background:var(--bg2);z-index:0;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;position:relative;z-index:1;}
+.sk{position:relative;overflow:hidden;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--r);padding:1.7rem;transition:transform 0.25s,border-color 0.25s;}
+.sk::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.sk:nth-child(1)::before{background:linear-gradient(90deg,var(--c1),var(--c2));}
+.sk:nth-child(2)::before{background:linear-gradient(90deg,var(--c2),var(--c3));}
+.sk:nth-child(3)::before{background:linear-gradient(90deg,var(--c3),var(--gold));}
+.sk:nth-child(4)::before{background:linear-gradient(90deg,var(--gold),var(--green));}
+.sk:nth-child(5)::before{background:linear-gradient(90deg,var(--green),var(--c1));}
+.sk:nth-child(6)::before{background:linear-gradient(90deg,var(--c1),var(--c3));}
+.sk:hover{transform:translateY(-6px);border-color:rgba(110,231,247,0.22);}
+.sk:hover::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(110,231,247,0.07),transparent 70%);pointer-events:none;}
+.sk-emoji{font-size:1.8rem;margin-bottom:0.85rem;display:block;}
+.sk-title{font-family:'Space Grotesk',sans-serif;font-size:0.97rem;font-weight:700;color:#fff;margin-bottom:0.8rem;}
+.sk-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.sk-tag{font-family:'JetBrains Mono',monospace;font-size:0.7rem;padding:0.22rem 0.6rem;border-radius:5px;border:1px solid rgba(110,231,247,0.15);background:rgba(110,231,247,0.06);color:var(--c1);transition:all 0.2s;}
+.sk-tag:hover{background:rgba(110,231,247,0.14);border-color:rgba(110,231,247,0.4);}
+
+/* ── CERTIFICATIONS — dark bg ───────────────────── */
+#certifications{background:var(--bg);position:relative;overflow:hidden;}
+.certs-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iODYuNiI+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0NzJCNiIgc3Ryb2tlLXdpZHRoPSIwLjYiIG9wYWNpdHk9IjAuMTgiPgo8cG9seWdvbiBwb2ludHM9IjI1LDAgNzUsMCAxMDAsNDMuMyA3NSw4Ni42IDI1LDg2LjYgMCw0My4zIi8+CjwvZz4KPC9zdmc+Cg==");
+  background-size:100px 86.6px;background-repeat:repeat;
+  opacity:0.45;
+}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:1.2rem;position:relative;z-index:1;}
+.cc{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:var(--r);padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:transform 0.25s,border-color 0.25s;position:relative;overflow:hidden;}
+.cc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,rgba(167,139,250,0.07),transparent 60%);pointer-events:none;}
+.cc:hover{transform:translateY(-4px);border-color:rgba(167,139,250,0.35);}
+.cc-ico{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--c2),var(--c3));display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;box-shadow:0 4px 15px rgba(167,139,250,0.3);}
+.cc-name{font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.2rem;}
+.cc-issuer{font-size:0.76rem;color:var(--muted);}
+.cc-date{font-size:0.7rem;color:var(--c1);margin-top:0.35rem;font-family:'JetBrains Mono',monospace;}
+
+/* ── EDUCATION — with university bg ────────────── */
+#education{position:relative;overflow:hidden;}
+.edu-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIj4KPGcgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4xOCI+CjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjE2MCIgeTI9IjAiLz4KPGxpbmUgeDE9IjAiIHkxPSI0MCIgeDI9IjE2MCIgeTI9IjQwIi8+CjxsaW5lIHgxPSIwIiB5MT0iODAiIHgyPSIxNjAiIHkyPSI4MCIvPgo8bGluZSB4MT0iMCIgeTE9IjEyMCIgeDI9IjE2MCIgeTI9IjEyMCIvPgo8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTYwIi8+CjxsaW5lIHgxPSI0MCIgeTE9IjAiIHgyPSI0MCIgeTI9IjE2MCIvPgo8bGluZSB4MT0iODAiIHkxPSIwIiB4Mj0iODAiIHkyPSIxNjAiLz4KPGxpbmUgeDE9IjEyMCIgeTE9IjAiIHgyPSIxMjAiIHkyPSIxNjAiLz4KPC9nPgo8ZyBzdHJva2U9IiNBNzhCRkEiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTUgNSBIMTUgTTUgNSBWMTUiLz4KPHBhdGggZD0iTTE1NSA1IEgxNDUgTTE1NSA1IFYxNSIvPgo8cGF0aCBkPSJNNSAxNTUgSDE1IE01IDE1NSBWMTQ1Ii8+CjxwYXRoIGQ9Ik0xNTUgMTU1IEgxNDUgTTE1NSAxNTUgVjE0NSIvPgo8L2c+Cjwvc3ZnPgo="),linear-gradient(135deg,#0A0F1E,#0D1B2A);
+  background-size:160px 160px,cover;background-repeat:repeat,no-repeat;
+}
+.edu-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,15,30,0.97) 50%,rgba(10,15,30,0.75) 100%);z-index:1;}
+.edu-content{position:relative;z-index:2;}
+.edu-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--r);padding:2.2rem;max-width:760px;position:relative;overflow:hidden;backdrop-filter:blur(10px);}
+.edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--gold));}
+.edu-glow{position:absolute;top:-80px;right:-80px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.1),transparent 70%);pointer-events:none;}
+.edu-degree{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;}
+.edu-school{background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;margin:0.35rem 0 0.5rem;font-size:0.9rem;}
+.edu-meta{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);}
+.thesis-box{margin-top:1.2rem;background:rgba(110,231,247,0.04);border:1px solid rgba(110,231,247,0.12);border-left:3px solid var(--c1);border-radius:0 8px 8px 0;padding:0.9rem 1.1rem;font-size:0.85rem;color:var(--soft);}
+.thesis-box strong{color:var(--c1);}
+.course-tags{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:0.5rem;}
+.ctag{font-size:0.72rem;padding:0.28rem 0.7rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;color:var(--soft);transition:all 0.2s;}
+.ctag:hover{border-color:var(--c2);color:var(--c2);}
+
+/* ── CONTACT ───────────────────────────────────── */
+#contact{position:relative;overflow:hidden;border-top:1px solid var(--border);}
+.contact-bg{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIj4KPGcgc3Ryb2tlPSIjQTc4QkZBIiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSI+CjxsaW5lIHgxPSIzMCIgeTE9IjQwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMTIwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iNDAiIHgyPSIxMTAiIHkyPSIxODAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iMTgwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjUwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjE0MCIvPgo8bGluZSB4MT0iMTEwIiB5MT0iMTgwIiB4Mj0iMjEwIiB5Mj0iMTQwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSIxODAiIHgyPSIyMTAiIHkyPSIyMzAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjUwIiB4Mj0iMzAwIiB5Mj0iMTAwIi8+CjxsaW5lIHgxPSIyMTAiIHkxPSIxNDAiIHgyPSIzMDAiIHkyPSIxMDAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjIwMCIvPgo8bGluZSB4MT0iMjEwIiB5MT0iMjMwIiB4Mj0iMzAwIiB5Mj0iMjAwIi8+CjwvZz4KPGcgZmlsbD0iI0E3OEJGQSIgb3BhY2l0eT0iMC42NSI+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNDAiIHI9IjMuMiIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjEyMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iMjAwIiByPSIzLjIiLz4KPGNpcmNsZSBjeD0iMTEwIiBjeT0iOTAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIxMTAiIGN5PSIxODAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIyMTAiIGN5PSI1MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjE0MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjIzMCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjEwMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjIwMCIgcj0iMy4yIi8+CjwvZz4KPC9zdmc+Cg==");
+  background-size:320px 320px;background-repeat:repeat;
+  opacity:0.4;
+}
+#contact::before{content:'';position:absolute;inset:0;background:var(--bg);z-index:0;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;position:relative;z-index:1;}
+.ct-title{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:0.5rem;}
+.ct-sub{color:var(--muted);margin-bottom:2rem;font-size:0.9rem;}
+.c-items{display:flex;flex-direction:column;gap:1rem;}
+.ci{display:flex;align-items:center;gap:1rem;padding:0.9rem 1.1rem;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;transition:border-color 0.2s,background 0.2s;}
+.ci:hover{border-color:rgba(110,231,247,0.25);background:rgba(110,231,247,0.04);}
+.ci-ico{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,rgba(110,231,247,0.15),rgba(167,139,250,0.15));border:1px solid rgba(110,231,247,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.ci-txt{font-size:0.88rem;color:var(--soft);}
+.ci-txt a{color:var(--c1);text-decoration:none;font-weight:500;}
+.lang-title{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.li{display:flex;justify-content:space-between;align-items:center;padding:0.65rem 0;border-bottom:1px solid var(--border);}
+.li:last-child{border:none;}
+.ln{font-weight:600;font-size:0.88rem;}
+.lb{font-family:'JetBrains Mono',monospace;font-size:0.7rem;background:rgba(110,231,247,0.08);border:1px solid rgba(110,231,247,0.2);color:var(--c1);padding:0.18rem 0.6rem;border-radius:4px;}
+.ref-title{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin:1.5rem 0 0.75rem;}
+.ref-cards{display:flex;flex-direction:column;gap:0.7rem;}
+.rc{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1.1rem;transition:border-color 0.2s;}
+.rc:hover{border-color:rgba(167,139,250,0.3);}
+.rc-name{font-weight:700;font-size:0.85rem;color:#fff;}
+.rc-role{font-size:0.76rem;color:var(--muted);margin-top:0.15rem;}
+.rc-role a{color:var(--c1);text-decoration:none;}
+
+/* ── FOOTER ────────────────────────────────────── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.fl{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;}
+.fl em{font-style:normal;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer p{color:var(--muted);font-size:0.8rem;}
+footer a{color:var(--c1);text-decoration:none;}
+
+/* ── TECH BANNER STRIP ─────────────────────────── */
+.tech-strip{
+  width:100%;padding:0;overflow:hidden;
+  background:rgba(0,0,0,0.4);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.tech-strip-inner{
+  display:flex;gap:0;
+  width:100%;height:200px;
+}
+.ts-img{position:relative;}
+.ts-img::before{
+  content:'';position:absolute;inset:0;z-index:0;
+}
+.ts1::before{background:radial-gradient(circle,rgba(110,231,247,0.18),transparent 70%);}
+.ts2::before{background:radial-gradient(circle,rgba(110,231,247,0.14),transparent 70%);}
+.ts3::before{background:radial-gradient(circle,rgba(167,139,250,0.22),transparent 70%);}
+.ts4::before{background:radial-gradient(circle,rgba(252,211,77,0.18),transparent 70%);}
+.ts5::before{background:radial-gradient(circle,rgba(52,211,153,0.18),transparent 70%);}
+.ts6::before{background:radial-gradient(circle,rgba(244,114,182,0.2),transparent 70%);}
+.ts-img{
+  flex:1;min-width:0;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  transition:flex 0.35s;
+  background-size:120px 120px;background-repeat:repeat;
+}
+.ts-icon{font-size:2.1rem;opacity:0.85;filter:drop-shadow(0 0 12px rgba(255,255,255,0.25));transition:transform 0.35s;position:relative;z-index:1;}
+.ts-img:hover .ts-icon{transform:scale(1.15);}
+.ts-img:hover{flex:1.8;}
+.ts-img::after{content:attr(data-label);position:absolute;bottom:0;left:0;right:0;padding:0.6rem;background:linear-gradient(transparent,rgba(0,0,0,0.75));color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:center;opacity:0;transition:opacity 0.3s;z-index:1;}
+.ts-img:hover::after{opacity:1;}
+.ts1{background-color:#0B2E3D;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC41Ij4KPHBhdGggZD0iTTIwIDIwIEgxMDAgVjcwIEgxODAgVjIwIi8+CjxwYXRoIGQ9Ik0yMCAyMCBWMTAwIEg2MCIvPgo8cGF0aCBkPSJNMTgwIDEwMCBWMTgwIEgyMjAiLz4KPHBhdGggZD0iTTIwIDE0MCBIODAgVjIyMCIvPgo8cGF0aCBkPSJNMTAwIDE0MCBWMjAwIEgxODAgVjE0MCIvPgo8cGF0aCBkPSJNMTQwIDcwIFYxMDAiLz4KPHBhdGggZD0iTTYwIDEwMCBWMTQwIi8+CjxwYXRoIGQ9Ik0xODAgMjAgVjYwIi8+CjwvZz4KPGcgZmlsbD0iIzZFRTdGNyIgb3BhY2l0eT0iMC43Ij4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI4MCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNDAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjE4MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMjAiIGN5PSIxODAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTgwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjgwIiBjeT0iMjIwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjIwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDAiIHI9IjMiLz4KPC9nPgo8L3N2Zz4K");}
+.ts2{background-color:#1A1F3D;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIj4KPGcgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4xOCI+CjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjE2MCIgeTI9IjAiLz4KPGxpbmUgeDE9IjAiIHkxPSI0MCIgeDI9IjE2MCIgeTI9IjQwIi8+CjxsaW5lIHgxPSIwIiB5MT0iODAiIHgyPSIxNjAiIHkyPSI4MCIvPgo8bGluZSB4MT0iMCIgeTE9IjEyMCIgeDI9IjE2MCIgeTI9IjEyMCIvPgo8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTYwIi8+CjxsaW5lIHgxPSI0MCIgeTE9IjAiIHgyPSI0MCIgeTI9IjE2MCIvPgo8bGluZSB4MT0iODAiIHkxPSIwIiB4Mj0iODAiIHkyPSIxNjAiLz4KPGxpbmUgeDE9IjEyMCIgeTE9IjAiIHgyPSIxMjAiIHkyPSIxNjAiLz4KPC9nPgo8ZyBzdHJva2U9IiNBNzhCRkEiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTUgNSBIMTUgTTUgNSBWMTUiLz4KPHBhdGggZD0iTTE1NSA1IEgxNDUgTTE1NSA1IFYxNSIvPgo8cGF0aCBkPSJNNSAxNTUgSDE1IE01IDE1NSBWMTQ1Ii8+CjxwYXRoIGQ9Ik0xNTUgMTU1IEgxNDUgTTE1NSAxNTUgVjE0NSIvPgo8L2c+Cjwvc3ZnPgo=");}
+.ts3{background-color:#2D1B40;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIj4KPGcgc3Ryb2tlPSIjQTc4QkZBIiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSI+CjxsaW5lIHgxPSIzMCIgeTE9IjQwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMTIwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iNDAiIHgyPSIxMTAiIHkyPSIxODAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iMTgwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjUwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjE0MCIvPgo8bGluZSB4MT0iMTEwIiB5MT0iMTgwIiB4Mj0iMjEwIiB5Mj0iMTQwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSIxODAiIHgyPSIyMTAiIHkyPSIyMzAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjUwIiB4Mj0iMzAwIiB5Mj0iMTAwIi8+CjxsaW5lIHgxPSIyMTAiIHkxPSIxNDAiIHgyPSIzMDAiIHkyPSIxMDAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjIwMCIvPgo8bGluZSB4MT0iMjEwIiB5MT0iMjMwIiB4Mj0iMzAwIiB5Mj0iMjAwIi8+CjwvZz4KPGcgZmlsbD0iI0E3OEJGQSIgb3BhY2l0eT0iMC42NSI+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNDAiIHI9IjMuMiIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjEyMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iMjAwIiByPSIzLjIiLz4KPGNpcmNsZSBjeD0iMTEwIiBjeT0iOTAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIxMTAiIGN5PSIxODAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIyMTAiIGN5PSI1MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjE0MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjIzMCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjEwMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjIwMCIgcj0iMy4yIi8+CjwvZz4KPC9zdmc+Cg==");background-size:200px 200px;}
+.ts4{background-color:#3D2410;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iODYuNiI+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0NzJCNiIgc3Ryb2tlLXdpZHRoPSIwLjYiIG9wYWNpdHk9IjAuMTgiPgo8cG9seWdvbiBwb2ludHM9IjI1LDAgNzUsMCAxMDAsNDMuMyA3NSw4Ni42IDI1LDg2LjYgMCw0My4zIi8+CjwvZz4KPC9zdmc+Cg==");}
+.ts5{background-color:#0F3D2E;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNkVFN0Y3IiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC41Ij4KPHBhdGggZD0iTTIwIDIwIEgxMDAgVjcwIEgxODAgVjIwIi8+CjxwYXRoIGQ9Ik0yMCAyMCBWMTAwIEg2MCIvPgo8cGF0aCBkPSJNMTgwIDEwMCBWMTgwIEgyMjAiLz4KPHBhdGggZD0iTTIwIDE0MCBIODAgVjIyMCIvPgo8cGF0aCBkPSJNMTAwIDE0MCBWMjAwIEgxODAgVjE0MCIvPgo8cGF0aCBkPSJNMTQwIDcwIFYxMDAiLz4KPHBhdGggZD0iTTYwIDEwMCBWMTQwIi8+CjxwYXRoIGQ9Ik0xODAgMjAgVjYwIi8+CjwvZz4KPGcgZmlsbD0iIzZFRTdGNyIgb3BhY2l0eT0iMC43Ij4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSI4MCIgY3k9IjE0MCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNDAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iMTQwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjE4MCIgY3k9IjEwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIyMjAiIGN5PSIxODAiIHI9IjMiLz4KPGNpcmNsZSBjeD0iMTgwIiBjeT0iMTgwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjgwIiBjeT0iMjIwIiByPSIzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjIwMCIgcj0iMyIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDAiIHI9IjMiLz4KPC9nPgo8L3N2Zz4K");}
+.ts6{background-color:#3D1A2E;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIj4KPGcgc3Ryb2tlPSIjQTc4QkZBIiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSI+CjxsaW5lIHgxPSIzMCIgeTE9IjQwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMTIwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iOTAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iNDAiIHgyPSIxMTAiIHkyPSIxODAiLz4KPGxpbmUgeDE9IjMwIiB5MT0iMjAwIiB4Mj0iMTEwIiB5Mj0iMTgwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjUwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSI5MCIgeDI9IjIxMCIgeTI9IjE0MCIvPgo8bGluZSB4MT0iMTEwIiB5MT0iMTgwIiB4Mj0iMjEwIiB5Mj0iMTQwIi8+CjxsaW5lIHgxPSIxMTAiIHkxPSIxODAiIHgyPSIyMTAiIHkyPSIyMzAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjUwIiB4Mj0iMzAwIiB5Mj0iMTAwIi8+CjxsaW5lIHgxPSIyMTAiIHkxPSIxNDAiIHgyPSIzMDAiIHkyPSIxMDAiLz4KPGxpbmUgeDE9IjIxMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjIwMCIvPgo8bGluZSB4MT0iMjEwIiB5MT0iMjMwIiB4Mj0iMzAwIiB5Mj0iMjAwIi8+CjwvZz4KPGcgZmlsbD0iI0E3OEJGQSIgb3BhY2l0eT0iMC42NSI+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNDAiIHI9IjMuMiIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjEyMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iMjAwIiByPSIzLjIiLz4KPGNpcmNsZSBjeD0iMTEwIiBjeT0iOTAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIxMTAiIGN5PSIxODAiIHI9IjMuOCIvPgo8Y2lyY2xlIGN4PSIyMTAiIGN5PSI1MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjE0MCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjIxMCIgY3k9IjIzMCIgcj0iMy44Ii8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjEwMCIgcj0iMy4yIi8+CjxjaXJjbGUgY3g9IjMwMCIgY3k9IjIwMCIgcj0iMy4yIi8+CjwvZz4KPC9zdmc+Cg==");background-size:200px 200px;}
+
+/* ── RESPONSIVE ────────────────────────────────── */
+@media(max-width:950px){
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;}
+  .hero{padding:90px 1.5rem 3rem;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-cards{flex-direction:row;flex-wrap:wrap;}
+  .hc{min-width:130px;}
+  section{padding:4rem 1.5rem;}
+  .about-wrap,.contact-grid{grid-template-columns:1fr;}
+  .tech-strip-inner{height:120px;}
+  footer{padding:1.5rem;}
+}
+
+/* ── REVEAL ANIMATION ──────────────────────────── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">B.<em>Assefa</em></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:belayeth1221@gmail.com" class="hire-btn">Hire Me →</a>
+</nav>
+
+<!-- HERO — circuit board photo bg -->
+<section class="hero" id="home">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="pulse"></span>Available for Opportunities</div>
+      <h1>Belay<br>Assefa<br><span class="gt">Bekele</span></h1>
+      <p class="hero-role">IT Officer &amp; Computer Engineer</p>
+      <p class="hero-desc">
+        A passionate Computer Engineer with deep expertise in <strong>networking, systems
+        administration, and cybersecurity</strong>. Driving digital transformation as IT Officer
+        at <strong>ABH Partners PLC</strong>, Addis Ababa — backed by a BSc. in Computer
+        Engineering and CCNA1 certification.
+      </p>
+      <div class="cta-row">
+        <a href="#experience" class="btn-grad">View My Work</a>
+        <a href="#contact" class="btn-out">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hc"><div class="hc-n">4+</div><div class="hc-l">Years Experience</div></div>
+      <div class="hc"><div class="hc-n">6</div><div class="hc-l">Certifications</div></div>
+      <div class="hc"><div class="hc-n">4</div><div class="hc-l">Organisations</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH PHOTO STRIP -->
+<div class="tech-strip">
+  <div class="tech-strip-inner">
+    <div class="ts-img ts1" data-label="Circuit Engineering"><span class="ts-icon">🔌</span></div>
+    <div class="ts-img ts2" data-label="Network Infrastructure"><span class="ts-icon">🌐</span></div>
+    <div class="ts-img ts3" data-label="Artificial Intelligence"><span class="ts-icon">🤖</span></div>
+    <div class="ts-img ts4" data-label="Cybersecurity"><span class="ts-icon">🛡️</span></div>
+    <div class="ts-img ts5" data-label="Data Systems"><span class="ts-icon">📊</span></div>
+    <div class="ts-img ts6" data-label="Emerging Tech"><span class="ts-icon">🚀</span></div>
+  </div>
+</div>
+
+<!-- ABOUT — server room bg -->
+<section id="about">
+  <div class="about-bg"></div>
+  <div class="con">
+    <div class="sl">01 — About</div>
+    <h2>Who I Am</h2>
+    <p class="ss">Computer Engineer · Network Specialist · IT Leader</p>
+    <div class="about-wrap">
+      <div class="about-text">
+        <p>I am a <strong>highly motivated Computer Engineer and IT Officer</strong> with a robust background in networking, systems administration, and data integrity. Currently serving as IT Officer at <strong>ABH Partners PLC</strong>, managing core ICT operations and digital infrastructure.</p>
+        <p>With a <strong>BSc. in Computer Engineering</strong> from Bule Hora University and a CCNA1 certification, I combine academic rigor with extensive field experience across government, NGO, and corporate environments.</p>
+        <p>I am driven by a passion for technical excellence and dedicated to mastering emerging technologies including <strong>Artificial Intelligence and Data Analysis</strong> to drive operational efficiency in high-stakes environments.</p>
+        <p>Outside work, I enjoy reading technical books, playing football, running, and swimming.</p>
+      </div>
+      <div class="reveal">
+        <div class="info-grid">
+          <div class="ir"><span class="ik">DOB</span><span class="iv">05 March 1997</span></div>
+          <div class="ir"><span class="ik">Location</span><span class="iv">Addis Ababa, Ethiopia</span></div>
+          <div class="ir"><span class="ik">Nationality</span><span class="iv">Ethiopian</span></div>
+          <div class="ir"><span class="ik">Phone</span><span class="iv"><a href="tel:+2510915808086">(+251) 0915808086</a></span></div>
+          <div class="ir"><span class="ik">Email</span><span class="iv"><a href="mailto:belayeth1221@gmail.com">belayeth1221@gmail.com</a></span></div>
+          <div class="ir"><span class="ik">LinkedIn</span><span class="iv"><a href="https://www.linkedin.com/belayassefa" target="_blank">linkedin.com/belayassefa</a></span></div>
+          <div class="ir"><span class="ik">Passport</span><span class="iv">EP6915707</span></div>
+          <div class="ir"><span class="ik">Licence</span><span class="iv">D1</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE — network bg -->
+<section id="experience">
+  <div class="exp-bg"></div>
+  <div class="con">
+    <div class="sl">02 — Experience</div>
+    <h2>Work History</h2>
+    <p class="ss">Hands-on IT leadership across government, NGO and corporate sectors</p>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div><div class="tl-role">IT Officer</div><div class="tl-co">ABH Partners PLC · Addis Ababa, Ethiopia</div></div>
+            <span class="tl-badge">Feb 2026 – Present</span>
+          </div>
+          <ul class="tl-list">
+            <li>Network &amp; Infrastructure Management</li>
+            <li>Technical Support &amp; Troubleshooting</li>
+            <li>System Security &amp; Data Integrity</li>
+            <li>Performance Monitoring &amp; Upgrades</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div><div class="tl-role">Senior IT Technician</div><div class="tl-co">Perfect Solution Partners PLC · Addis Ababa, Ethiopia</div></div>
+            <span class="tl-badge">Aug 2021 – Nov 2025</span>
+          </div>
+          <ul class="tl-list">
+            <li>Network systems installation, configuration and security oversight</li>
+            <li>Network troubleshooting, repairs and maintenance</li>
+            <li>Security camera installation and configuration</li>
+            <li>OS testing, hardware &amp; software installation and maintenance</li>
+            <li>Preventive maintenance for office machines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div><div class="tl-role">Data Entry Specialist</div><div class="tl-co">European Centre for Electoral Support (ECES)</div></div>
+            <span class="tl-badge">Dec 2022 – Feb 2023</span>
+          </div>
+          <ul class="tl-list">
+            <li>Maintaining client databases with strict confidentiality compliance</li>
+            <li>Data backups, error checking and duplicate entry elimination</li>
+            <li>Compiling, recording and reviewing data for accuracy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div><div class="tl-role">ICT Team Leader</div><div class="tl-co">National Election Board of Ethiopia (NEBE)</div></div>
+            <span class="tl-badge">Feb 2021 – Jul 2021</span>
+          </div>
+          <ul class="tl-list">
+            <li>Configured networks for NEBE election processes</li>
+            <li>Day-to-day LAN administration, maintenance and support</li>
+            <li>Managed data backups and disaster recovery at wereda level</li>
+            <li>Introduced EMS software and virtual server infrastructure</li>
+            <li>Rapid diagnosis and resolution of all network and server issues</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS — AI bg -->
+<section id="skills">
+  <div class="skills-bg"></div>
+  <div class="con" style="position:relative;z-index:1;">
+    <div class="sl">03 — Skills</div>
+    <h2>Technical Expertise</h2>
+    <p class="ss">Core competencies built through years of hands-on field work</p>
+    <div class="skills-grid">
+      <div class="sk reveal"><span class="sk-emoji">🌐</span><div class="sk-title">Networking &amp; Infrastructure</div><div class="sk-tags"><span class="sk-tag">LAN/WAN</span><span class="sk-tag">CCNA</span><span class="sk-tag">TCP/IP</span><span class="sk-tag">Network Security</span><span class="sk-tag">VPN</span><span class="sk-tag">Routing</span></div></div>
+      <div class="sk reveal"><span class="sk-emoji">🖥️</span><div class="sk-title">Systems Administration</div><div class="sk-tags"><span class="sk-tag">Windows Server</span><span class="sk-tag">Linux</span><span class="sk-tag">OS Testing</span><span class="sk-tag">Virtualization</span><span class="sk-tag">Active Directory</span></div></div>
+      <div class="sk reveal"><span class="sk-emoji">🔐</span><div class="sk-title">Cybersecurity</div><div class="sk-tags"><span class="sk-tag">Network Security</span><span class="sk-tag">Malware Removal</span><span class="sk-tag">Data Integrity</span><span class="sk-tag">ADBI Certified</span></div></div>
+      <div class="sk reveal"><span class="sk-emoji">🔧</span><div class="sk-title">Hardware &amp; Maintenance</div><div class="sk-tags"><span class="sk-tag">Computer Repair</span><span class="sk-tag">CCTV Systems</span><span class="sk-tag">Office Machines</span><span class="sk-tag">Preventive Maintenance</span></div></div>
+      <div class="sk reveal"><span class="sk-emoji">💻</span><div class="sk-title">Software &amp; Development</div><div class="sk-tags"><span class="sk-tag">HTML/CSS/JS</span><span class="sk-tag">Java</span><span class="sk-tag">OOP</span><span class="sk-tag">Database Systems</span><span class="sk-tag">Data Structures</span></div></div>
+      <div class="sk reveal"><span class="sk-emoji">🤖</span><div class="sk-title">Data &amp; AI</div><div class="sk-tags"><span class="sk-tag">Data Analysis</span><span class="sk-tag">Artificial Intelligence</span><span class="sk-tag">Microsoft Office</span><span class="sk-tag">Database Mgmt</span><span class="sk-tag">Backup &amp; Recovery</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS — data center bg -->
+<section id="certifications">
+  <div class="certs-bg"></div>
+  <div class="con">
+    <div class="sl">04 — Certifications</div>
+    <h2>Credentials &amp; Training</h2>
+    <p class="ss">Continuous learning across networking, AI, cybersecurity and data analysis</p>
+    <div class="cert-grid">
+      <div class="cc reveal"><div class="cc-ico">🔗</div><div><div class="cc-name">CCNA 1 — Networking</div><div class="cc-issuer">Cisco Networking Academy · Bule Hora University</div><div class="cc-date">Oct 2020 – Dec 2020</div></div></div>
+      <div class="cc reveal"><div class="cc-ico">🤖</div><div><div class="cc-name">Artificial Intelligence</div><div class="cc-issuer">Udacity</div><div class="cc-date">Jul 2025 – Sep 2025</div></div></div>
+      <div class="cc reveal"><div class="cc-ico">📈</div><div><div class="cc-name">Data Analysis Fundamentals</div><div class="cc-issuer">Udacity</div><div class="cc-date">Jul 2025 – Sep 2025</div></div></div>
+      <div class="cc reveal"><div class="cc-ico">🛡️</div><div><div class="cc-name">Cybersecurity</div><div class="cc-issuer">ADB Institute (elearning-adbi.org)</div><div class="cc-date">Jan 2026 – Feb 2026</div></div></div>
+      <div class="cc reveal"><div class="cc-ico">☕</div><div><div class="cc-name">Introduction to Java</div><div class="cc-issuer">Virtual Computer Engineering, Addis Ababa</div><div class="cc-date">Jun 2017 – Jul 2017</div></div></div>
+      <div class="cc reveal"><div class="cc-ico">💡</div><div><div class="cc-name">Intro to Hardware &amp; Operating Systems</div><div class="cc-issuer">IBM through Coursera</div><div class="cc-date">Jul 2022 – Aug 2022</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION — university photo bg -->
+<section id="education">
+  <div class="edu-bg"></div>
+  <div class="edu-overlay"></div>
+  <div class="con edu-content">
+    <div class="sl">05 — Education</div>
+    <h2>Academic Background</h2>
+    <p class="ss">Strong engineering foundation from one of Ethiopia's leading technical universities</p>
+    <div class="edu-card reveal">
+      <div class="edu-glow"></div>
+      <div class="edu-degree">BSc. Computer Engineering</div>
+      <div class="edu-school">Bule Hora University — Electrical &amp; Computer Engineering (Major: Computer Engineering)</div>
+      <div class="edu-meta">Dec 2014 – Dec 2020 &nbsp;·&nbsp; Bule Hora, Ethiopia &nbsp;·&nbsp; bhu.edu.et</div>
+      <div class="thesis-box"><strong>Thesis:</strong> Arduino Based IV Fluid Delivery and Monitoring System</div>
+      <div class="course-tags">
+        <span class="ctag">Network Security</span><span class="ctag">Advanced Networks</span>
+        <span class="ctag">Database Systems</span><span class="ctag">OOP</span>
+        <span class="ctag">Operating Systems</span><span class="ctag">Computer Architecture</span>
+        <span class="ctag">Data Structures &amp; Algorithms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT — space/globe bg -->
+<section id="contact">
+  <div class="contact-bg"></div>
+  <div class="con">
+    <div class="sl">06 — Contact</div>
+    <h2>Get in Touch</h2>
+    <p class="ss">Open to new opportunities, collaborations and technical partnerships</p>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="ct-title">Let's Connect</div>
+        <div class="ct-sub">Based in Addis Ababa, Ethiopia. Available for IT roles, consulting and technical partnerships locally and internationally.</div>
+        <div class="c-items">
+          <div class="ci"><div class="ci-ico">📞</div><div class="ci-txt"><a href="tel:+2510915808086">(+251) 0915808086</a></div></div>
+          <div class="ci"><div class="ci-ico">✉️</div><div class="ci-txt"><a href="mailto:belayeth1221@gmail.com">belayeth1221@gmail.com</a></div></div>
+          <div class="ci"><div class="ci-ico">💼</div><div class="ci-txt"><a href="https://www.linkedin.com/belayassefa" target="_blank">linkedin.com/belayassefa</a></div></div>
+          <div class="ci"><div class="ci-ico">📍</div><div class="ci-txt">1000, Addis Ababa, Ethiopia</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="lang-title">Languages</div>
+        <div class="li"><span class="ln">Amharic</span><span class="lb">NATIVE</span></div>
+        <div class="li"><span class="ln">Afan Oromo</span><span class="lb">NATIVE</span></div>
+        <div class="li"><span class="ln">English</span><span class="lb">B2 — Independent</span></div>
+        <div class="ref-title">References</div>
+        <div class="ref-cards">
+          <div class="rc"><div class="rc-name">Mr. Derara Senay (MSc)</div><div class="rc-role">Lecturer, Bule Hora University · <a href="mailto:derjan06@gmail.com">derjan06@gmail.com</a></div></div>
+          <div class="rc"><div class="rc-name">Mr. Gurmessa Meribo (MSc)</div><div class="rc-role">IS Security Specialist, Commercial Bank of Ethiopia</div></div>
+          <div class="rc"><div class="rc-name">Mr. Ermias Assefa (MSc)</div><div class="rc-role">Senior ICT Business Analyst, Ethiopian Shipping &amp; Logistics</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">B.<em>Assefa</em> Bekele</div>
+  <p>© 2026 · IT Officer &amp; Computer Engineer · Addis Ababa, Ethiopia</p>
+  <p><a href="mailto:belayeth1221@gmail.com">belayeth1221@gmail.com</a></p>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Tech strip: expand on click for mobile
+document.querySelectorAll('.ts-img').forEach(el => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('.ts-img').forEach(x => x.style.flex='1');
+    el.style.flex = '2.5';
+  });
+});
+</script>
+</body>
+</html>
